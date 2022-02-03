@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Funny verbs</title>
+</head>
+<body>
+  <!-- Bootstrap black bar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="col-9">
+          <h3 class="verbs-font-white">funny verbs</h3>
+        </div>
+        <div class="col-3">
+          <p class="verbs-font-white" id="verbs-counter"></p>
+        </div>
+    </div>
+  </nav>
+  <div class="text-center">
+    <!-- The PLAY sign -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16" id="next">
+      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+    </svg>
+  </div>
+  <h1 class="text-center" id = "showVerb">Play to start</h1>
+  <div class="container text-center">
+    <div class="verbs-container">
+      <!-- The IMAGE shows here -->
+      <div id = "showImage"></div>
+      
+      <!-- Here we play de AUDIO -->
+      <audio id="showAudio"></audio>
+
+      <!-- The Probably Answers -->
+      <p id="first-verb" class="verbs-answer"></p>
+      <p id="second-verb" class="verbs-answer"></p>
+      <p id="third-verb" class="verbs-answer"></p>
+      <p id="fourth-verb" class="verbs-answer"></p>
+    </div>
+
+  </div>
+
+<script src="script.js" charset="utf-8"></script>
+</body>
+</html>

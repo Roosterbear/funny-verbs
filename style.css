@@ -1,0 +1,17 @@
+.verbs-container{
+  margin: 0 30% 0 30%;
+}
+
+/* We need white text for black bar */
+.verbs-font-white{
+  color:white;
+}
+
+.verbs-answer{
+  display: block;
+}
+
+#next{
+  cursor: pointer;
+  color: green;
+}
