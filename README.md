@@ -3,7 +3,7 @@ A way to learn english verbs with a JS App
 
 == I'm working on it ==
 
-I had the idea of make funny the way to learn verbs,
+I had the idea of make a funny way to learn verbs,
 since my children was trying to learn verbs in english
 because the high-school.
 
