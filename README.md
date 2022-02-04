@@ -1,5 +1,5 @@
 # funny-verbs
-A way to lear english verbs with a JS App
+A way to learn english verbs with a JS App
 
 == I'm working on it ==
 
