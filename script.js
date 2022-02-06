@@ -1,127 +1,40 @@
-// ***************************************************
-// VERBS
-// ***************************************************
-
-const verbs = [
-  'open',
-  'accept',
-  'love',
-  'learn',
-  'hurry',
-  'dare',
-  'help',
-  'dance',
-  'erase',
-  'change',
-  'walk',
-  'close',
-  'date',
-  'cook',
-  'consider',
-  'count',
-  'answer',
-  'wish',
-  'start',
-  'push',
-  'deliver',
-  'listen',
-  'expect',
-  'wait',
-  'study',
-  'miss',
-  'smoke',
-  'enjoy',
-  'talk',
-  'try',
-  'play',
-  'wash',
-  'clean',
-  'underline',
-  'continue',
-  'complete',
-  'check',
-  'mark',
-  'match',
-  'share'
-];
-
-const verbos = [
-  'abrir',
-  'aceptar',
-  'amar',
-  'aprender',
-  'apresurarse',
-  'atreverse',
-  'ayudar',
-  'bailar',
-  'borrar',
-  'cambiar',
-  'caminar',
-  'cerrar',
-  'citar',
-  'cocinar',
-  'considerar',
-  'contar',
-  'responder',
-  'desear',
-  'comenzar',
-  'empujar',
-  'entregar',
-  'escuchar',
-  'esperar',
-  'esperar',
-  'estudiar',
-  'extrañar',
-  'fumar',
-  'disfrutar',
-  'hablar',
-  'intentar',
-  'jugar',
-  'lavar',
-  'limpiar',
-  'subrayar',
-  'continuar',
-  'completar',
-  'checar',
-  'marcar',
-  'relacionar',
-  'compartir'
-];
-
+// how many verbs we have
 const numberOfVerbs = verbs.length;
-
-let list = [];
-for (var i = 0; i < numberOfVerbs; i++){
-  list.push(i);
-}
-
+// One right answer and three wrong
 let answerRoullete = [0,1,1,1];
+// every number of verbs
+let list = [];
 
+// Elements that show the VERB
 const showVerb = document.getElementById("showVerb");
 const showImage = document.getElementById("showImage");
 const showAudio = document.getElementById("showAudio");
 
+// Helper elements
 const next = document.getElementById("next");
 const verbsCounter = document.getElementById("verbs-counter");
+// we start in the last position
+let position = list.length-1;
+
+// Answers
 const first = document.getElementById("first-verb");
 const second = document.getElementById("second-verb");
 const third = document.getElementById("third-verb");
 const fourth = document.getElementById("fourth-verb");
 
-// ==================
-// get random numbers
-// ==================
-list = list.sort(() => Math.random() - 0.5);
-
-// we start in the last position
-position = list.length-1;
-
-// SVG play button listener
+// SVG starter play button listener
 next.addEventListener("click",function(){
   ponerVerbo();
 });
 
+// ==================
+// get a random list
+// ==================
+makeRandomList();
+
+
 // =========================================
+// answer buttons listeners
 // =========================================
 
 // First button listener
@@ -149,12 +62,24 @@ fourth.addEventListener("click", function(){
 });
 
 // =========================================
+// do a list of numbers that we can shuffle
 // =========================================
+function makeRandomList(){
+  // array with same number of items than verbs
+  for (var i = 0; i < numberOfVerbs; i++){
+    list.push(i);
+  }
+  // shuffle the numberOfVerbs in a weird way
+  list = list.sort(() => Math.random() - 0.5);
+}
 
+// =========================================
+//
+// =========================================
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
-  // While there remain elements to shuffle...
+  // While there are remain elements to shuffle...
   while (currentIndex != 0) {
 
     // Pick a remaining element...
@@ -214,5 +139,3 @@ function ponerVerbo(){
     position = position - 1;
   }
 }
-
-// This is a test to use Atom with Git and github
