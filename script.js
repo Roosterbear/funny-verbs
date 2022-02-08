@@ -25,6 +25,7 @@ let rightAnswer;
 // SVG starter play button listener
 next.addEventListener("click",function(){
   ponerVerbo();
+  next.style.display = 'none';
 });
 
 // ==================
@@ -34,7 +35,7 @@ makeRandomList();
 // we start in the last position
 let position = everyNumberOfVerbs.length-1;
 // =========================================
-// do a list of numbers that we can shuffle
+// Make a list of numbers that we can shuffle
 // =========================================
 function makeRandomList(){
   // array with same number of items than verbs
@@ -55,13 +56,16 @@ function buttonEffect(itsRight,button){
     button.classList.add('rightAnswer');
     setTimeout(function(){
       button.classList.remove('rightAnswer');
-    },1000);
+    },1500);
   }else{
     button.classList.add('wrongAnswer');
     setTimeout(function(){
       button.classList.remove('wrongAnswer');
-    },1000);
+    },1500);
   }
+  setTimeout(function(){
+    ponerVerbo();
+  },1500);
 }
 
 // First button listener
@@ -110,10 +114,17 @@ function shuffleAnswers(array) {
   return array;
 }
 
+
+// ==============================
+// Tell us if our answer is right
+// ==============================
 function itsRight_(answer){
   return answer==rightAnswer?true:false;
 }
 
+// ===================================
+// Used to get wrong answer for button
+// ===================================
 function randomVerbo(notThisOne){
   theOne = Math.floor(Math.random()*verbos.length);
 
@@ -126,15 +137,15 @@ function ponerVerbo(){
   answerRoullete = shuffleAnswers(answerRoullete);
 
   let randomPosition = everyNumberOfVerbs[position];
-  let imgText = "<img src='img/"+verbs[randomPosition]+".jpg' height:'210px' width='150px'>";
+  let imgText = "<img src='img/"+verbs[randomPosition]+".jpg' height:'140px' width='100px'>";
 
   // ===================================
   // Adding style to the answers buttons
   // ===================================
-  first.classList.add("btn","btn-outline-success","btn-sm");
-  second.classList.add("btn","btn-outline-success","btn-sm");
-  third.classList.add("btn","btn-outline-success","btn-sm");
-  fourth.classList.add("btn","btn-outline-success","btn-sm");
+  first.classList.add("btn","btn-outline-primary","btn-md");
+  second.classList.add("btn","btn-outline-primary","btn-md");
+  third.classList.add("btn","btn-outline-primary","btn-md");
+  fourth.classList.add("btn","btn-outline-primary","btn-md");
 
   if (position >= 0){
     var just_position = position+1;
@@ -153,4 +164,7 @@ function ponerVerbo(){
     rightAnswer = verbos[randomPosition];
     position = position - 1;
   }
+
+
+  // TODO do something if its over
 }

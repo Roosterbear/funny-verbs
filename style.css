@@ -1,5 +1,5 @@
 .verbs-container{
-  margin: 0 30% 0 30%;
+  margin: 0 35% 0 35%;
 }
 
 /* We need white text for black bar */
@@ -9,19 +9,23 @@
 
 .verbs-answer{
   display: block;
+
 }
 
 #next{
+  margin-top: 10rem;
   cursor: pointer;
   color: green;
 }
 
-.rightAnswer{
+.rightAnswer, .rightAnswer:hover, rightAnswer:active{
   background-color: #6ab04c;
+  border-color: #6ab04c;
   color: #ffffff;
 }
 
-.wrongAnswer{
-  background-color: #eb4d4b;
+.wrongAnswer, .wrongAnswer:hover, wrongAnswer:active{
+  background-color: #B33030;
+  border-color: #B33030;
   color: #ffffff;
 }
