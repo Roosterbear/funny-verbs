@@ -15,3 +15,13 @@
   cursor: pointer;
   color: green;
 }
+
+.rightAnswer{
+  background-color: #6ab04c;
+  color: #ffffff;
+}
+
+.wrongAnswer{
+  background-color: #eb4d4b;
+  color: #ffffff;
+}

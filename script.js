@@ -50,28 +50,38 @@ function makeRandomList(){
 // answer buttons listeners
 // =========================================
 
+function buttonEffect(itsRight,button){
+  if (itsRight){
+    button.classList.add('rightAnswer');
+    setTimeout(function(){
+      button.classList.remove('rightAnswer');
+    },1000);
+  }else{
+    button.classList.add('wrongAnswer');
+    setTimeout(function(){
+      button.classList.remove('wrongAnswer');
+    },1000);
+  }
+}
+
 // First button listener
 first.addEventListener("click",function(){
-  //TODO change color: right-green, wrong-red
-  itsRight_(first.innerHTML);
+  buttonEffect(itsRight_(first.innerHTML),this);
 });
 
 // Second button listener
 second.addEventListener("click", function(){
-  //TODO change color: right-green, wrong-red
-  itsRight_(second.innerHTML);
+  buttonEffect(itsRight_(second.innerHTML),this);
 });
 
 // Third button listener
 third.addEventListener("click", function(){
-  //TODO change color: right-green, wrong-red
-  itsRight_(third.innerHTML);
+  buttonEffect(itsRight_(third.innerHTML),this);
 });
 
 // Fourth button listener
 fourth.addEventListener("click", function(){
-  //TODO change color: right-green, wrong-red
-  itsRight_(fourth.innerHTML);
+  buttonEffect(itsRight_(fourth.innerHTML),this);
 });
 
 
@@ -101,11 +111,7 @@ function shuffleAnswers(array) {
 }
 
 function itsRight_(answer){
-  if (answer == rightAnswer){
-    alert('correcto, eres un cabron');
-  }else{
-    alert('ponte a estudiar pendejo');
-  }
+  return answer==rightAnswer?true:false;
 }
 
 function randomVerbo(notThisOne){
