@@ -6,7 +6,8 @@ const showAudio = document.getElementById("showAudio");
 // Helper elements
 const next = document.getElementById("next");
 const verbsCounter = document.getElementById("verbs-counter");
-
+const allRightCounter = document.getElementById("all-right-answers");
+const verbsContainer = document.getElementById("verbs-container");
 // Answers
 const first = document.getElementById("first-verb");
 const second = document.getElementById("second-verb");
@@ -20,7 +21,8 @@ let answerRoullete = [0,1,1,1];
 
 let everyNumberOfVerbs = [];
 
-let rightAnswer;
+let rightAnswer; // Every right answer
+let allRightAnswers = 0; // Right answers counter
 
 // SVG starter play button listener
 next.addEventListener("click",function(){
@@ -56,16 +58,17 @@ function buttonEffect(itsRight,button){
     button.classList.add('rightAnswer');
     setTimeout(function(){
       button.classList.remove('rightAnswer');
-    },1500);
+    },300);
+    allRightAnswers = allRightAnswers+1;
   }else{
     button.classList.add('wrongAnswer');
     setTimeout(function(){
       button.classList.remove('wrongAnswer');
-    },1500);
+    },300);
   }
   setTimeout(function(){
     ponerVerbo();
-  },1500);
+  },300);
 }
 
 // First button listener
@@ -150,6 +153,7 @@ function ponerVerbo(){
   if (position >= 0){
     var just_position = position+1;
     verbsCounter.innerHTML = ""+just_position+" / "+numberOfVerbs;
+    allRightCounter.innerHTML = "Right answers: "+allRightAnswers;
     showVerb.innerHTML = verbs[randomPosition];
     showImage.innerHTML = imgText;
 
@@ -163,8 +167,13 @@ function ponerVerbo(){
 
     rightAnswer = verbos[randomPosition];
     position = position - 1;
+  }else{
+    // Here we finish!
+    verbsCounter.innerHTML = "0/40";
+    allRightCounter.innerHTML = "Right answers: "+allRightAnswers;
+    showVerb.innerHTML = "Thank you !";
+
+    // Hides verbs content
+    verbsContainer.innerHTML = "";
   }
-
-
-  // TODO do something if its over
 }
