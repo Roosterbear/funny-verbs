@@ -2,7 +2,6 @@
 ## A way to learn english verbs with a JS App
 
 ### == I'm working on it ==
-### ~~Functional~~
 
 I had the idea of make a *funny way* to learn verbs, since my children was trying to _learn verbs_ in english because the high-school.
 
