@@ -70,7 +70,6 @@ const verbs = [
 'point',
 'end',
 'work',
-'try',
 'climb',
 'use',
 'dress',
@@ -84,6 +83,7 @@ const verbs = [
 'introduce',
 'watch',
 'paint',
+'read',
 'invite'
 */
 
@@ -156,7 +156,6 @@ const verbos = [
 'señalar',
 'terminar',
 'trabajar',
-'intentar',
 'trepar',
 'usar',
 'vestir',
@@ -170,5 +169,6 @@ const verbos = [
 'presentar',
 'observar',
 'pintar',
+'leer',
 'invitar'
 */
