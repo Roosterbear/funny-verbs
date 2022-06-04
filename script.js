@@ -169,7 +169,7 @@ function ponerVerbo(){
     position = position - 1;
   }else{
     // Here we finish!
-    verbsCounter.innerHTML = "0/40";
+    verbsCounter.innerHTML = "0 / "+numberOfVerbs;
     allRightCounter.innerHTML = "Right answers: "+allRightAnswers;
     showVerb.innerHTML = "Thank you !";
 
