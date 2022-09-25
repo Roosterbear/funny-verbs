@@ -12,13 +12,13 @@
   color: green;
 }
 
-.rightAnswer, .rightAnswer:hover, rightAnswer:active{
+.rightAnswer, .rightAnswer:hover{
   background-color: #6ab04c;
   border-color: #6ab04c;
   color: #ffffff;
 }
 
-.wrongAnswer, .wrongAnswer:hover, wrongAnswer:active{
+.wrongAnswer, .wrongAnswer:hover{
   background-color: #B33030;
   border-color: #B33030;
   color: #ffffff;
