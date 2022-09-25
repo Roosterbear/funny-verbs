@@ -1,5 +1,5 @@
 #verbs-container{
-  margin: 0 35% 0 35%;
+  margin: 0 35%;
 }
 
 /* We need white text for black bar */
@@ -9,10 +9,6 @@
 
 .verbs-answer{
   display: block;
-}
-
-.none{
-  display: none;
 }
 
 #next{
