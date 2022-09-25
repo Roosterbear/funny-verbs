@@ -2,11 +2,6 @@
   margin: 0 35%;
 }
 
-/* We need white text for black bar */
-.verbs-font-white{
-  color:white;
-}
-
 .verbs-answer{
   display: block;
 }
