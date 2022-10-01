@@ -58,13 +58,13 @@ function buttonEffect(itsRight,button){
     button.classList.add('rightAnswer');
     setTimeout(function(){
       button.classList.remove('rightAnswer');
-    },300);
+    },800);
     allRightAnswers = allRightAnswers+1;
   }else{
     button.classList.add('wrongAnswer');
     setTimeout(function(){
       button.classList.remove('wrongAnswer');
-    },300);
+    },800);
   }
   setTimeout(function(){
     ponerVerbo();
@@ -178,5 +178,3 @@ function ponerVerbo(){
   }
 }
 
-
-// This comment is just for testing github
