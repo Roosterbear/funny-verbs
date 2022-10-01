@@ -73,22 +73,22 @@ function buttonEffect(itsRight,button){
 
 // First button listener
 first.addEventListener("click",function(){
-  buttonEffect(itsRight_(first.innerHTML),this);
+  buttonEffect(isItRight_(first.innerHTML),this);
 });
 
 // Second button listener
 second.addEventListener("click", function(){
-  buttonEffect(itsRight_(second.innerHTML),this);
+  buttonEffect(isItRight_(second.innerHTML),this);
 });
 
 // Third button listener
 third.addEventListener("click", function(){
-  buttonEffect(itsRight_(third.innerHTML),this);
+  buttonEffect(isItRight_(third.innerHTML),this);
 });
 
 // Fourth button listener
 fourth.addEventListener("click", function(){
-  buttonEffect(itsRight_(fourth.innerHTML),this);
+  buttonEffect(isItRight_(fourth.innerHTML),this);
 });
 
 
@@ -121,7 +121,7 @@ function shuffleAnswers(array) {
 // ==============================
 // Tell us if our answer is right
 // ==============================
-function itsRight_(answer){
+function isItRight_(answer){
   return answer==rightAnswer?true:false;
 }
 
