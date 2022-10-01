@@ -1,3 +1,5 @@
+const test = document.getElementById('pruebas');
+
 // Elements that show the VERB
 const showVerb = document.getElementById("showVerb");
 const showImage = document.getElementById("showImage");
@@ -100,9 +102,10 @@ function shuffleAnswers(array) {
   // We start at the end of array
   let currentIndex = array.length;
   // The different index
+test.innerHTML = currentIndex;
   let randomIndex;
 
-  // While there are remain elements to shuffle...
+  // While there are remaining elements to shuffle...
   while (currentIndex != 0) {
 
     // Pick a remaining element...
