@@ -102,7 +102,6 @@ function shuffleAnswers(array) {
   // We start at the end of array
   let numberOfAnswerButtons = array.length;
   // The different index
-test.innerHTML = numberOfAnswerButtons;
   let randomIndex;
 
   // While there are remaining elements to shuffle...
@@ -111,10 +110,9 @@ test.innerHTML = numberOfAnswerButtons;
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * numberOfAnswerButtons);
     numberOfAnswerButtons--;
-
     // And swap it with the current element.
     [array[numberOfAnswerButtons], array[randomIndex]] = [
-      array[randomIndex], array[numberOfAnswerButtons]];
+    array[randomIndex], array[numberOfAnswerButtons]];
   }
 
   return array;
