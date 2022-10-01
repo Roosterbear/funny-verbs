@@ -100,21 +100,21 @@ fourth.addEventListener("click", function(){
 // ===============================================
 function shuffleAnswers(array) {
   // We start at the end of array
-  let currentIndex = array.length;
+  let numberOfAnswerButtons = array.length;
   // The different index
-test.innerHTML = currentIndex;
+test.innerHTML = numberOfAnswerButtons;
   let randomIndex;
 
   // While there are remaining elements to shuffle...
-  while (currentIndex != 0) {
+  while (numberOfAnswerButtons != 0) {
 
     // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+    randomIndex = Math.floor(Math.random() * numberOfAnswerButtons);
+    numberOfAnswerButtons--;
 
     // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
+    [array[numberOfAnswerButtons], array[randomIndex]] = [
+      array[randomIndex], array[numberOfAnswerButtons]];
   }
 
   return array;
