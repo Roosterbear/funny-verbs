@@ -35,7 +35,7 @@ next.addEventListener("click",function(){
 // ==================
 makeRandomList();
 // we start in the last position
-let position = everyNumberOfVerbs.length-1;
+let lastPosition = everyNumberOfVerbs.length-1;
 // =========================================
 // Make a list of numbers that we can shuffle
 // =========================================
@@ -139,7 +139,7 @@ function ponerVerbo(){
   // Shuflle answers at every verb
   answerRoullete = shuffleAnswers(answerRoullete);
 
-  let randomPosition = everyNumberOfVerbs[position];
+  let randomPosition = everyNumberOfVerbs[lastPosition];
   let imgText = "<img src='img/"+verbs[randomPosition]+".jpg' height:'140px' width='100px'>";
 
   // ===================================
@@ -150,8 +150,8 @@ function ponerVerbo(){
   third.classList.add("btn","btn-outline-primary","btn-md");
   fourth.classList.add("btn","btn-outline-primary","btn-md");
 
-  if (position >= 0){
-    var just_position = position+1;
+  if (lastPosition >= 0){
+    var just_position = lastPosition+1;
     verbsCounter.innerHTML = ""+just_position+" / "+numberOfVerbs;
     allRightCounter.innerHTML = "Right answers: "+rightAnswersCounter;
     showVerb.innerHTML = verbs[randomPosition];
@@ -166,7 +166,7 @@ function ponerVerbo(){
     fourth.innerHTML = !answerRoullete[3]?verbos[randomPosition]:verbos[randomVerbo(randomPosition)];
 
     rightAnswer = verbos[randomPosition];
-    position = position - 1;
+    lastPosition =lastPosition - 1;
   }else{
     // Here we finish!
     verbsCounter.innerHTML = "0 / "+numberOfVerbs;
