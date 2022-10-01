@@ -58,17 +58,17 @@ function buttonEffect(itsRight,button){
     button.classList.add('rightAnswer');
     setTimeout(function(){
       button.classList.remove('rightAnswer');
-    },800);
+    },1500);
     allRightAnswers = allRightAnswers+1;
   }else{
     button.classList.add('wrongAnswer');
     setTimeout(function(){
       button.classList.remove('wrongAnswer');
-    },800);
+    },1500);
   }
   setTimeout(function(){
     ponerVerbo();
-  },300);
+  },1500);
 }
 
 // First button listener
