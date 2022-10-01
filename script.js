@@ -22,7 +22,7 @@ let answerRoullete = [0,1,1,1];
 let everyNumberOfVerbs = [];
 
 let rightAnswer; // Every right answer
-let allRightAnswers = 0; // Right answers counter
+let rightAnswersCounter = 0; // Right answers counter
 
 // SVG starter play button listener
 next.addEventListener("click",function(){
@@ -59,7 +59,7 @@ function buttonEffect(itsRight,button){
     setTimeout(function(){
       button.classList.remove('rightAnswer');
     },1000);
-    allRightAnswers = allRightAnswers+1;
+    rightAnswersCounter = rightAnswersCounter+1;
   }else{
     button.classList.add('wrongAnswer');
     setTimeout(function(){
@@ -153,7 +153,7 @@ function ponerVerbo(){
   if (position >= 0){
     var just_position = position+1;
     verbsCounter.innerHTML = ""+just_position+" / "+numberOfVerbs;
-    allRightCounter.innerHTML = "Right answers: "+allRightAnswers;
+    allRightCounter.innerHTML = "Right answers: "+rightAnswersCounter;
     showVerb.innerHTML = verbs[randomPosition];
     showImage.innerHTML = imgText;
 
@@ -170,7 +170,7 @@ function ponerVerbo(){
   }else{
     // Here we finish!
     verbsCounter.innerHTML = "0 / "+numberOfVerbs;
-    allRightCounter.innerHTML = "Right answers: "+allRightAnswers;
+    allRightCounter.innerHTML = "Right answers: "+rightAnswersCounter;
     showVerb.innerHTML = "Thank you !";
 
     // Hides verbs content
