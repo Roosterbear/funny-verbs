@@ -1,4 +1,4 @@
-# Funny Verbs
+# Funny Verbs 😃 🗣️ 
 ## A way to learn english verbs with a JS App
 
 I had an idea of make a __funny way__ to learn verbs in english, since my children was trying to learn them in the high-school.
