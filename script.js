@@ -104,6 +104,7 @@ function shuffleAnswers(array) {
   // The different index
   let randomIndex;
 
+  
   // While there are remaining elements to shuffle...
   while (numberOfAnswerButtons != 0) {
 
@@ -115,6 +116,7 @@ function shuffleAnswers(array) {
     array[randomIndex], array[numberOfAnswerButtons]];
   }
 
+  
   return array;
 }
 
