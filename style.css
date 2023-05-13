@@ -6,16 +6,14 @@
   display: block;
 }
 
-.bt-funny, .bt-funny:active{
+.bt-funny, .bt-funny:visited, .btfunny:visited{
   color:#0d6efd;
   border-color:#0d6efd;
   background-color: #fff;
 }
 
 .bt-funny:hover{
-  background-color:#0d6efd;
-  border-color:#0d6efd;
-  color: #fff;
+  color:#0c2750;
 }
 
 #next{
