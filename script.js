@@ -16,6 +16,12 @@ const second = document.getElementById("second-verb");
 const third = document.getElementById("third-verb");
 const fourth = document.getElementById("fourth-verb");
 
+// For smartphones
+first.blur();
+second.blur();
+third.blur();
+fourth.blur();
+
 // how many verbs we have
 const numberOfVerbs = verbs.length;
 // One right answer and three wrong
