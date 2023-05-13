@@ -1,10 +1,10 @@
-const test = document.getElementById('pruebas');
 
 // Elements that show the VERB
 const showVerb = document.getElementById("showVerb");
 const showImage = document.getElementById("showImage");
 const showAudio = document.getElementById("showAudio");
 
+showImage.focus();
 // Helper elements
 const next = document.getElementById("next");
 const verbsCounter = document.getElementById("verbs-counter");
