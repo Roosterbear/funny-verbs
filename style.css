@@ -6,6 +6,12 @@
   display: block;
 }
 
+.bt-funny{
+  color:#0d6efd !important;
+  border-color:#0d6efd !important;
+  background-color: #fff !important;
+}
+
 #next{
   margin-top: 10rem;
   cursor: pointer;
@@ -24,9 +30,3 @@
   color: #ffffff;
 }
 
-.btn-outline-primary:active,
-.btn-outline-primary:visited{
-  color:#0d6efd !important;
-  border-color:#0d6efd !important;
-  background-color: #fff !important;
-}

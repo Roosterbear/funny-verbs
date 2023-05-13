@@ -16,12 +16,6 @@ const second = document.getElementById("second-verb");
 const third = document.getElementById("third-verb");
 const fourth = document.getElementById("fourth-verb");
 
-// For smartphones
-first.blur();
-second.blur();
-third.blur();
-fourth.blur();
-
 // how many verbs we have
 const numberOfVerbs = verbs.length;
 // One right answer and three wrong
@@ -154,10 +148,10 @@ function ponerVerbo(){
   // ===================================
   // Adding style to the answers buttons
   // ===================================
-  first.classList.add("btn","btn-outline-primary","btn-md");
-  second.classList.add("btn","btn-outline-primary","btn-md");
-  third.classList.add("btn","btn-outline-primary","btn-md");
-  fourth.classList.add("btn","btn-outline-primary","btn-md");
+  first.classList.add("btn", "btn-md", "bt-funny");
+  second.classList.add("btn", "btn-md", "bt-funny");
+  third.classList.add("btn", "btn-md", "bt-funny");
+  fourth.classList.add("btn", "btn-md", "bt-funny");
 
   if (lastPosition >= 0){
     var just_position = lastPosition+1;
