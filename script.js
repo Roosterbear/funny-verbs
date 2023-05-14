@@ -4,7 +4,6 @@ const showVerb = document.getElementById("showVerb");
 const showImage = document.getElementById("showImage");
 const showAudio = document.getElementById("showAudio");
 
-showImage.focus();
 // Helper elements
 const next = document.getElementById("next");
 const verbsCounter = document.getElementById("verbs-counter");
@@ -148,10 +147,10 @@ function ponerVerbo(){
   // ===================================
   // Adding style to the answers buttons
   // ===================================
-  first.classList.add("btn", "btn-md", "bt-funny");
-  second.classList.add("btn", "btn-md", "bt-funny");
-  third.classList.add("btn", "btn-md", "bt-funny");
-  fourth.classList.add("btn", "btn-md", "bt-funny");
+  first.classList.add("bt-funny");
+  second.classList.add("bt-funny");
+  third.classList.add("bt-funny");
+  fourth.classList.add("bt-funny");
 
   if (lastPosition >= 0){
     var just_position = lastPosition+1;
