@@ -1,28 +1,22 @@
 #verbs-container{
-  margin: 0 42%;
+  margin: 0 37%;
 }
 
 .verbs-answer{
   display: block;
 }
 
-.bt-funny{
+.bt-funny,
+.btfunny:link,
+.btfunny:hover,
+.bt-funny:visited, 
+.btfunny:active{
   background-color:#0d6efd;  
   color: #fff;
   padding: 5px;
   font-size: 1rem;
   border-radius: 17px;
   cursor:pointer;
-}
-
-.bt-funny:hover{  
-  color: #fff ;
-  background-color:#071a35;
-}
-
-.bt-funny:visited, .btfunny:active{
-  background-color:#0d6efd;  
-  color: #fff;
 }
 
 #next{
