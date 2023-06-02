@@ -1,5 +1,5 @@
 #verbs-container{
-  margin: 0 32%;
+  margin: 0 12%;
 }
 
 .verbs-answer{
@@ -7,18 +7,22 @@
 }
 
 .bt-funny,
-.btfunny:link,
-.btfunny:hover,
+.bt-funny:link,
+.bt-funny:hover,
 .bt-funny:visited, 
-.btfunny:active{
+.bt-funny:active{
   background-color:#0d6efd;  
   color: #fff;
-  padding: 5px;
-  font-size: 1rem;
-  border-radius: 17px;
+  padding: 3.5px;
+  font-size: 0.9rem;
+  border-radius: 11px;
   cursor:pointer;
-  width: 200px;
+  width: 180px;
+  height: 30px;
+  line-height: 25px;
   margin: 15px auto;
+  /* Avoiding the text selection */
+  user-select: none;
 }
 
 #next{
