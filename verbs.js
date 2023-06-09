@@ -109,7 +109,7 @@ const verbos = [
   'empujar',
   'entregar',
   'escuchar',
-  'esperar',
+  'anticipar',
   'esperar',
   'estudiar',
   'extrañar',

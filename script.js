@@ -3,6 +3,7 @@
 const showVerb = document.getElementById("showVerb");
 const showImage = document.getElementById("showImage");
 const showAudio = document.getElementById("showAudio");
+const showWrongs = document.getElementById("showWrongs");
 
 // Helper elements
 const next = document.getElementById("next");
@@ -24,6 +25,9 @@ let everyNumberOfVerbs = [];
 
 let rightAnswer; // Every right answer
 let rightAnswersCounter = 0; // Right answers counter
+
+let wrongs = '';
+
 
 // SVG starter play button listener
 next.addEventListener("click",function(){
@@ -124,6 +128,7 @@ function shuffleAnswers(array) {
 // Tell us if our answer is right
 // ==============================
 function isItRight_(answer){
+  if (answer!=rightAnswer) wrongs+='❌'+rightAnswer+' ';
   return answer==rightAnswer?true:false;
 }
 
@@ -174,9 +179,10 @@ function ponerVerbo(){
     verbsCounter.innerHTML = "0 / "+numberOfVerbs;
     allRightCounter.innerHTML = "Right answers: "+rightAnswersCounter;
     showVerb.innerHTML = "Thank you !";
-
+    
     // Hides verbs content
     verbsContainer.innerHTML = "";
+    showWrongs.innerHTML = ""+wrongs;
   }
 }
 
